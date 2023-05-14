@@ -2,5 +2,6 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import './styles/normalize.scss';
 import './styles/global.scss';
+import { StrictMode } from 'react';
 
-ReactDOM.render(<App />, document.querySelector('#root'));
+ReactDOM.render(<StrictMode><App /></StrictMode>, document.getElementById('root'));

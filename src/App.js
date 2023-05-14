@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
 import Container from './components/Container/Container';
 import FormattedTime from './components/FormattedTime/FormattedTime';
-import Button from './components/Button/Button';
+import Button from './components/Button/Button.js';
 
 const App = () => {
-  const [time, setTime] = useState(0);
+  
   const [timer, setTimer] = useState(null);
+  const [time, setTime] = useState(0);
 
   const start = () => {
     clearInterval(timer);
@@ -27,18 +28,18 @@ const App = () => {
 
   useEffect(() => {
     return () => {
-       if (timer) {
+      if (timer) {
         clearInterval(timer);
-       }
+      }
     };
   }, [timer]);
 
-  return(
+  return (
     <Container>
       <FormattedTime time={time} />
-      <Button start={start}>Start</Button>
-      <Button stop={stop}>Stop</Button>
-      <Button reset={reset}>Reset</Button>
+      <Button action={start}>Start</Button>
+      <Button action={stop}>Stop</Button>
+      <Button action={reset}>Reset</Button>
     </Container>
   );
 };

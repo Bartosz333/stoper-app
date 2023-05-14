@@ -1,8 +1,10 @@
+@import '../../styles/settings.scss';
+
 .btn {
-    background-color: #26de81;
-    color: #fff;
+    background-color: $color-success;
+    color: $color-light;
     border-radius: 5px;
-    border: #26de81;
+    border: $color-success;
     padding: 10px 15px;
     margin: 10px;
     text-transform: uppercase;
